@@ -5,7 +5,6 @@ const LINKS = [
   ['unidades', 'Unidades'],
   ['clube', 'Clube'],
   ['noivo', 'Dia do Noivo'],
-  ['heranca', 'Herança'],
 ]
 
 export default function Nav({ navRef, activeId, menuOpen, onToggleMenu }) {
@@ -39,7 +38,7 @@ export default function Nav({ navRef, activeId, menuOpen, onToggleMenu }) {
           {LINKS.map(([id, label], i) => (
             <a key={id} href={`#${id}`} onClick={onToggleMenu}>{label} <i>{String(i + 2).padStart(2, '0')}</i></a>
           ))}
-          <a href="#agendar" onClick={onToggleMenu}>Agendar <i>06</i></a>
+          <a href="#agendar" onClick={onToggleMenu}>Agendar <i>05</i></a>
         </div>
       </header>
     </>

@@ -359,7 +359,7 @@ img{max-width:100%}
 .hero.on .cta{opacity:1;transform:none}
 
 /* ---------- marquee (faixa de branding: varsity + itálico + wordmark) ---------- */
-.marq{background:var(--cream);color:var(--dark-ink);overflow:hidden;padding:18px 0;
+.marq{background:var(--cream);color:var(--dark-ink);overflow:hidden;padding:4px 0;
   border-top:1px solid rgba(20,38,44,.12);border-bottom:1px solid rgba(20,38,44,.12)}
 .marq .track{display:flex;width:max-content;animation:marq 46s linear infinite}
 .marq:hover .track{animation-play-state:paused}
@@ -571,7 +571,7 @@ footer{background:var(--ink-2);border-top:1px solid var(--line);color:var(--crea
 footer .wrap{padding:52px clamp(20px,4vw,44px) 42px;display:grid;
   grid-template-columns:1.4fr 1fr;gap:40px;align-items:start}
 @media(max-width:820px){footer .wrap{grid-template-columns:1fr;gap:28px}}
-.pitchbox{border:2px dashed var(--red);border-radius:var(--r-card);padding:30px;
+.pitchbox{border-radius:var(--r-card);padding:30px;
   background:color-mix(in srgb,var(--red) 7%,transparent)}
 .pitchbox .tag{font-size:.58rem;letter-spacing:.3em;text-transform:uppercase;color:var(--red);font-weight:900}
 .pitchbox h3{font-family:var(--disp);text-transform:uppercase;font-weight:400;
@@ -610,7 +610,10 @@ footer .wrap{padding:52px clamp(20px,4vw,44px) 42px;display:grid;
   .herit .fact{padding:16px 18px 0 0;margin-right:18px}
   .herit .yr{font-size:5.6rem;top:.4em}
   footer .wrap{padding-top:40px}
-  .pitchbox{padding:24px}
+  .pitchbox{padding:16px}
+  .pitchbox h3{font-size:1.2rem; margin: 8px 0 6px}
+  .pitchbox p{font-size:0.85rem; margin-bottom: 8px}
+  .pitchbox ul{font-size:0.8rem; margin-bottom: 12px; padding-left: 14px}
 }
 
 @media(prefers-reduced-motion:reduce){

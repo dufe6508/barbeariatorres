@@ -1,4 +1,4 @@
-export default function Button({ href, onClick, variant = 'red', size, icon, className = '', style, children }) {
+export default function Button({ href, onClick, variant = 'red', size, icon, className = '', style, children, target, rel }) {
   const cls = ['btn-torres', `btn-torres--${variant}`, size && `btn-torres--${size}`, className]
     .filter(Boolean).join(' ')
   const content = (
@@ -10,5 +10,5 @@ export default function Button({ href, onClick, variant = 'red', size, icon, cla
   if (onClick && !href) {
     return <button type="button" className={cls} style={style} onClick={onClick}>{content}</button>
   }
-  return <a href={href} className={cls} style={style} onClick={onClick}>{content}</a>
+  return <a href={href} target={target} rel={rel} className={cls} style={style} onClick={onClick}>{content}</a>
 }

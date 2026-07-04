@@ -6,7 +6,7 @@ import Units from './components/Units.jsx'
 import Clube from './components/Clube.jsx'
 import Noivo from './components/Noivo.jsx'
 import BookCta from './components/BookCta.jsx'
-import Heritage from './components/Heritage.jsx'
+
 import Footer from './components/Footer.jsx'
 import TopButton from './components/TopButton.jsx'
 
@@ -133,7 +133,6 @@ export default function App() {
         <Clube wordRef={clubeWordRef} />
         <Noivo />
         <BookCta />
-        <Heritage />
       </main>
       <Footer />
       <TopButton visible={showTop} />
