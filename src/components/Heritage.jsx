@@ -1,5 +1,4 @@
 import mrTorresBg from '../assets/mr-torres-bg.jpg'
-import livro from '../assets/livro.png'
 
 const FACTS = [
   ['1992', 'Fundação'],
@@ -32,15 +31,6 @@ export default function Heritage() {
               <img src={mrTorresBg} alt="Edimar Torres, o Mr. Torres, ao lado da cadeira de barbeiro" loading="lazy" />
               <figcaption>Edimar Torres · <b>fundador · 1992</b></figcaption>
             </figure>
-            <div className="bookcard rv d2">
-              <img className="bookcover" src={livro} alt="Livro Histórias de Cadeira, por Mr. Torres" loading="lazy" />
-              <div className="bookcard-txt">
-                <span className="tag">O livro</span>
-                <h3>Histórias de Cadeira</h3>
-                <p>Trinta anos de conversa atrás da navalha, no papel. Escrito pelo próprio Mr. Torres.</p>
-                <div className="rule"></div>
-              </div>
-            </div>
           </div>
         </div>
       </div>

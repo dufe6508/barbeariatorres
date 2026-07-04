@@ -54,8 +54,8 @@ img{max-width:100%}
   transition:opacity .35s}
 .nav.scrolled::before{opacity:0}
 .nav.scrolled{background:linear-gradient(180deg,
-    color-mix(in srgb,var(--ground) 68%,transparent),
-    color-mix(in srgb,var(--ground) 56%,transparent));
+    color-mix(in srgb,var(--ground) 96%,transparent),
+    color-mix(in srgb,var(--ground) 90%,transparent));
   -webkit-backdrop-filter:blur(22px) saturate(1.5);backdrop-filter:blur(22px) saturate(1.5);
   box-shadow:inset 0 1px 0 rgba(255,255,255,.07),0 1px 0 var(--line),
     0 10px 30px rgba(0,0,0,.22)}
@@ -334,7 +334,8 @@ img{max-width:100%}
 .hero .wrap{position:relative;z-index:3;width:100%;padding-bottom:clamp(46px,7vh,80px);padding-top:150px}
 /* label vintage: filete + caixa-alta espaçada, cara de placa de barbearia */
 .hero .hero-tag{display:flex;align-items:center;gap:.9em;margin-bottom:26px;
-  font-family:var(--eng);color:var(--cream);letter-spacing:.26em;font-size:.9rem;font-weight:600;
+  font-family:var(--eng);color:var(--cream);letter-spacing:clamp(.08em,1.4vw,.26em);
+  font-size:clamp(.6rem,2.6vw,.9rem);font-weight:600;white-space:nowrap;
   text-transform:uppercase;
   filter:drop-shadow(0 2px 12px rgba(0,0,0,.8));opacity:0;transform:translateY(14px);
   transition:opacity .7s var(--ease) .05s,transform .7s var(--ease) .05s}
@@ -358,7 +359,7 @@ img{max-width:100%}
 .hero.on .cta{opacity:1;transform:none}
 
 /* ---------- marquee (faixa de branding: varsity + itálico + wordmark) ---------- */
-.marq{background:var(--cream);color:var(--dark-ink);overflow:hidden;padding:13px 0;
+.marq{background:var(--cream);color:var(--dark-ink);overflow:hidden;padding:18px 0;
   border-top:1px solid rgba(20,38,44,.12);border-bottom:1px solid rgba(20,38,44,.12)}
 .marq .track{display:flex;width:max-content;animation:marq 46s linear infinite}
 .marq:hover .track{animation-play-state:paused}
@@ -368,7 +369,7 @@ img{max-width:100%}
   font-size:.92rem;letter-spacing:.09em}
 .marq .mq-item em{font-family:var(--serif);font-style:italic;letter-spacing:.02em;
   font-size:.98rem;color:var(--red)}
-.marq .mq-logo{height:24px;width:auto;margin:0 2.8em;opacity:.92;flex:none;
+.marq .mq-logo{height:64px;width:auto;margin:0 2.8em;opacity:.92;flex:none;
   transform:translateY(1px)}
 @keyframes marq{to{transform:translateX(-50%)}}
 
@@ -488,7 +489,7 @@ h2.tt em{font-family:var(--serif);font-style:italic;text-transform:none;color:va
 .clube.blk{padding:clamp(72px,10vw,130px) 0}
 
 /* ---------- dia do noivo ---------- */
-.noivo{background:var(--ink-2)}
+.noivo{background:var(--ink-2);padding:clamp(40px,5.5vw,68px) 0}
 .noivo .bgim{position:absolute;inset:0;background-size:cover;background-position:center}
 .noivo::after{content:"";position:absolute;inset:0;
   background:linear-gradient(90deg,rgba(5,12,16,.97) 34%,rgba(5,12,16,.62) 68%,rgba(5,12,16,.32))}
@@ -550,8 +551,8 @@ h2.tt em{font-family:var(--serif);font-style:italic;text-transform:none;color:va
 .herit .fact:last-child{border-right:none}
 .herit .fact .n{font-family:var(--disp);font-size:2rem;color:var(--red-hot)}
 .herit .fact .l{font-size:.58rem;letter-spacing:.24em;text-transform:uppercase;color:var(--bone);margin-top:4px}
-/* mídia: retrato do Mr. Torres emoldurado + capa do livro sobreposta */
-.herit-media{position:relative;padding-bottom:56px}
+/* mídia: retrato do Mr. Torres emoldurado */
+.herit-media{position:relative}
 .herit .portrait{margin:0;position:relative;aspect-ratio:5/4;border-radius:var(--r-card);overflow:hidden;
   background:#0A1418;border:1px solid rgba(241,236,224,.14);
   box-shadow:0 30px 70px rgba(0,0,0,.5),inset 0 0 0 1px rgba(255,255,255,.03)}
@@ -562,28 +563,7 @@ h2.tt em{font-family:var(--serif);font-style:italic;text-transform:none;color:va
   color:var(--cream);font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;font-weight:700;
   background:linear-gradient(0deg,rgba(6,14,18,.92),rgba(6,14,18,.3) 62%,transparent)}
 .herit .portrait figcaption b{color:var(--red-hot)}
-/* card do livro: sobreposto no canto inferior esquerdo do retrato */
-.bookcard{position:absolute;left:clamp(-8px,-1.5vw,-28px);bottom:0;z-index:2;
-  width:min(340px,86%);display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:center;
-  background:linear-gradient(170deg,#15343F,var(--ink-2));color:var(--cream);padding:16px 20px;
-  border-radius:var(--r-card);box-shadow:0 22px 50px rgba(0,0,0,.6);
-  border:1px solid rgba(241,236,224,.12);
-  transition:transform .45s var(--ease),box-shadow .45s var(--ease)}
-.bookcard:hover{transform:translateY(-5px);box-shadow:0 28px 60px rgba(0,0,0,.66)}
-.bookcard .bookcover{width:clamp(74px,9vw,92px);height:auto;display:block;
-  transform:rotate(-3deg);transform-origin:bottom center;
-  filter:drop-shadow(0 14px 24px rgba(0,0,0,.6));transition:transform .5s var(--ease)}
-.bookcard:hover .bookcover{transform:rotate(0) translateY(-3px)}
-.bookcard .tag{font-size:.54rem;letter-spacing:.28em;text-transform:uppercase;color:#E0A9A0;font-weight:800}
-.bookcard h3{font-family:var(--disp);text-transform:uppercase;font-weight:400;
-  font-size:clamp(1.2rem,2vw,1.5rem);line-height:.98;margin:8px 0 6px}
-.bookcard p{color:#AEBABA;font-size:.78rem;line-height:1.5;margin:0}
-.bookcard .rule{height:3px;width:40px;background:var(--red);margin-top:12px;border-radius:3px}
-@media(max-width:900px){.herit-media{padding-bottom:0}
-  .herit .portrait{aspect-ratio:4/3}
-  .bookcard{position:static;width:100%;margin-top:16px}}
-@media(max-width:420px){.bookcard{grid-template-columns:1fr;justify-items:start;gap:14px}
-  .bookcard .bookcover{width:96px;transform:none}}
+@media(max-width:900px){.herit .portrait{aspect-ratio:4/3}}
 
 /* ---------- footer ---------- */
 footer{background:var(--ink-2);border-top:1px solid var(--line);color:var(--cream)}
@@ -613,6 +593,8 @@ footer .wrap{padding:52px clamp(20px,4vw,44px) 42px;display:grid;
   section.blk{padding:64px 0}
   .hero{min-height:min(92svh,760px)}
   .hero .wrap{padding-top:118px;padding-bottom:44px}
+  .hero .hero-tag{gap:.5em}
+  .hero .hero-tag .hr{width:20px}
   .hero .sub{margin-top:18px}
   .hero .cta{margin-top:28px;flex-direction:row;flex-wrap:wrap;
     align-items:center;justify-content:center;gap:12px 16px}
@@ -627,7 +609,6 @@ footer .wrap{padding:52px clamp(20px,4vw,44px) 42px;display:grid;
   .herit .facts{flex-wrap:wrap}
   .herit .fact{padding:16px 18px 0 0;margin-right:18px}
   .herit .yr{font-size:5.6rem;top:.4em}
-  .bookcard{padding:26px;transform:none}
   footer .wrap{padding-top:40px}
   .pitchbox{padding:24px}
 }
